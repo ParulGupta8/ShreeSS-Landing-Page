@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:image" content="logo2.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:description" content="Shree SS Landing Page" /> 
+    <meta property="og:title" content="Shree SS Landing Page"/>  
+    <meta property="og:type" content="Website">
+    <!-- <meta property="og:url" content=""> -->
+
+    <link rel="shortcut icon" type="image/png" href="logo2.png">
+    <title>Shree SS Properties</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+       /* To remove arrow from input type number in Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+        /* ...in Firefox */
+        input[type=number] {
+        -moz-appearance: textfield;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 18px;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #f5f5f5;
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+        }
+        ::-webkit-scrollbar-thumb {
+            border-radius: 25px;
+            background: linear-gradient(#343a40, lightgrey);
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+        }
+
+        body {
+            background-color: azure;
+        }
+        .container-fluid1 {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 95vh;
+            background: url("2.jpg") no-repeat;
+            background-size: cover;
+        }
+        .topLeftLogo {
+            height: 60px;
+            width: 60px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        form {
+            /* background-color: transparent; */
+            background-color: rgba(255, 255, 255, .7);
+            box-shadow: 0 8px 12px rgb(31 92 163 / 20%);
+            flex: 424px 0;
+            margin-top: 12px;
+            border-radius: 8px;
+            padding: 24px 3rem;
+            /* width: 35%; */
+            margin-right: 8%;
+        }
+        .icons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            z-index: 2;
+            bottom: 8px;
+            right: 1rem;
+            /* background-color: rgba(1, 1, 1, .4); */
+        }
+        .icons i {
+            font-size: 2.5rem; 
+            padding: .2rem;
+            margin: .8rem;
+            float: right;
+            transition: all .7s;
+            cursor: pointer;
+        }
+        .icons i:hover {
+            transform: scale(.8) ;
+        }
+        /* ABOUT1 WEB VIEW */
+        
+        .about1 {
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 0 10px grey;
+            border-radius: 20px;
+            margin: 0 3rem;
+        }
+        .left {
+            background: url('about.jpg') no-repeat;
+            background-size: cover;
+            min-height: 80vh;
+            width: 40vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px 0 0 20px;
+        }
+        .right {
+            width: 100%;
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5ecec;
+            border-radius: 0 20px 20px 0;
+        }
+        .right p {
+            width: 80%;
+        }
+        .aboutHead {
+            padding: .5rem;
+            /* position: absolute;
+            left: 12rem;
+            top: 57rem; */
+        }
+        .text {
+            padding: 3rem;
+            font-size: 18px;
+            font-family: 'Jost', sans-serif;
+            /* 'Courier New', Courier, monospace; */
+        }
+        .visit a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+        .visit {
+            background-color: #a7a4a4;
+            font-weight: bold;
+            padding: 1rem;
+            margin-bottom: 4rem;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            box-shadow: 1px 5px 12px rgba(1, 0, 1, .4);
+            transition: all 1.2s;
+        }
+        .visit:hover {
+            background-color: #776969;
+            transform: scale(1.05);
+        }
+        
+        
+    /*------------------  FOOTER---------------- */
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+.pg-footer {
+  font-family: 'Roboto', sans-serif;
+}
+.footer {
+    background-color: #776969;
+    color: #fff;
+}
+.footer-wave-svg {
+    background-color: transparent;
+    display: block;
+    height: 70px;
+    position: relative;
+    top: -1px;
+    width: 100%;
+}
+.footer-wave-path {
+    fill: azure;
+}
+.footer_top {
+  display: flex;
+  justify-content: space-between;
+}
+.widget{
+    margin-right: 2rem;
+}
+.widget h5 {
+    margin-bottom: 1.5rem;
+}
+.widget ul {
+    list-style: none;
+    padding: 0;
+}
+.widget ul li {
+    margin-bottom: .5rem;
+}
+.widget ul li a {
+    line-height: 1.8rem;
+    font-size: 14px;
+    transition: transform .2s;
+}
+.widget ul li a:hover {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+    font-size: 16px;
+}
+
+/* social media icons-------- */
+.social-icons i {
+    text-shadow: none;
+    color: #fff;
+    padding: 12px 10px 8px 10px;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    margin: 0 3px 0 3px;
+}
+.social-icons i:hover {
+    transform: scale(1.5);
+}
+
+.footer-content-column ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-copyright {
+    padding: 15px 30px;
+    text-align: center;
+    background-color: #a7a4a4;
+    height: 50px;
+}
+.footer-copyright-text {
+  color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.footer-copyright-text:hover{
+  color: black !important;
+}
+
+
+      
+        /* Tooltip */
+        .tooltipp {
+            background-color: #2050a0;
+            color: white;
+            min-height: 100px;
+            min-width: 300px;
+            padding: 1rem;
+            vertical-align: middle;
+            font-weight: 600;
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            display: none;
+            box-shadow: 10px 5px 5px grey;
+        }
+
+        @media (max-width: 768px) {
+        form {
+            justify-content: center;
+            margin-right: 0;
+        }
+        .container-fluid1 {
+            height: 100vh;
+            justify-content: center;
+        }
+        .about1 {
+            display: none;
+        }
+        /* ABOUT2 MOBILE VIEW*/
+        .about2 {
+            background: url('about.jpg') no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            left: -50px;
+            position: relative;
+        }
+        .about2 h1 {
+            padding-top: 2rem;
+        }
+        .pg-footer{
+            margin-top: 4rem !important;
+        }
+        .text {
+            color: white;
+            padding: 2rem;
+        }
+        .visit {
+            margin-bottom: 3rem;
+        }
+        .footer .container {
+            text-align: center;}
+    }
+    @media (min-width: 769px) {
+        .about2 {
+            display: none;
+        }
+    }
+    @media (max-width: 1000px) and (min-width: 768px)  {
+        .left h1 {
+            word-break: break-word;
+            width: 50%;
+            line-height: 80px;
+        }
+    }
+
+    </style>
+
+</head>
+<body>
+    <div class="container-fluid1">
+        <img  class='topLeftLogo' src="logo2.png" alt="">
+        <form>
+            <h1 style="font-size: 24px; line-height: 26px; color:#2050a0; text-align: center;">Get a Quick Call Back from Us!</h1>
+
+            <div style="margin: 1rem 0 2rem 0;">
+                <h3 style="font-size: 1rem;">Name <span class="text-danger">*</span></h3>
+                <input type="text" id="username" class="form-control mb-4" placeholder="Full Name"
+                    aria-label="name" aria-describedby="basic-addon1" required>
+
+                <h3 style="font-size: 1rem;">Phone <span class="text-danger">*</span></h3>
+                <input type="number" id="phone" name="phone" class="form-control mb-4" maxlength="10"
+                    placeholder="Phone Number" style="margin-bottom: .5rem;" required >
+                    
+                <h3 style="font-size: 1rem;">Email <span class="text-danger">*</span></h3>
+                <input type="maiL" id="Email" class="form-control mb-4" placeholder="Your Email" 
+                aria-label="mail" aria-describedby="basic-addon1" required>
+
+                <h3 style="font-size: 1rem;">Your Property Preference <span class="text-danger">*</span></h3>
+                <select class="form-control"  id="select" required>
+                    <option class="options" style="margin-bottom: 1rem" value="1 BHK">1 BHK</option>
+                    <option class="options" style="margin-bottom: 1rem" value="2 BHK">2 BHK</option>
+                    <option class="options" style="margin-bottom: 1rem" value="3 BHK">3 BHK</option>
+                    <option class="options" style="margin-bottom: 1rem" value="4 BHK">4 BHK</option>
+                    <option class="options" style="margin-bottom: 1rem" value="5 BHK">5 BHK</option>
+                    <option class="options" style="margin-bottom: 1rem" value="Commercial">Commercial</option>
+                </select>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="check" onclick="agree()">
+                        <label class="form-check-label" for="check">
+                            <span style="color: #42526E; font-size: 12px;">I accept the <a href="">terms & conditions</a></span>
+                        </label>
+                    </div>
+
+                </div>
+                <div style="text-align: center;">
+                    <button type="button" class="btn posting" style="padding: .5rem 1.5rem; background-color: #2050a0; color: white;" id="posting" onclick="post()" disabled>
+                        Get a Call Back!</button>
+                </div>
+            </div>
+   
+        </form>
+
+        <!-- Tooltip -->
+        <div id="tooltipp" class="tooltipp">
+            <div class="d-flex justify-content-center align-items-center">
+                <div>Thank You !</div> 
+            </div>
+        </div>
+
+        <!-- Contact Icons -->
+        <div class="icons">
+            <div><a href="https://wa.me/917042850399" target="_blank"><i class="whatspp fa-brands fa-whatsapp text-light bg-success" style="font-size: 3.5rem; border-radius: 70px; padding: .5rem;"></i></a></div>
+            <div><a href="tel:917042850399"><i class=" call fa-sharp fa-solid fa-phone text-primary"></i></a></div>
+        </div>
+
+    </div>
+
+    <!-- About us section -->
+    <div class="about  m-5">
+        
+        <div class="about1">
+            <div class="left">
+                <h1 class="text-light m-lg-6" data-aos="fade-left" data-aos-duration="1500" data-aos-easing="ease-out">
+                    Who We Are?
+                </h1>
+            </div>
+            <div class="right">
+                <p class="text" data-aos="flip-down" offset="350">
+                        Shree SS Properties is an accomplished Real Estate firm, dealing across Delhi/NCR and is working progressively to expand its branches across India. We deal in residential and commercial properties for lease, rent and sell. Drawing from our years of experience since 1995, Shree SS Properties has built a reputation for providing a seamless experience to their customers to secure them their dream home. We bring a strategic yet personal approach to buying, selling and renting process. 
+                        <br><br>
+                        Through constant innovation, utmost integrity and team work SS Properties a socially responsible and comprehensive real estate service provider exceeds customer expectations in quality delivery and cost. We aim at building an ever-lasting relationship with our customers by providing them the best of our services and a solution to all their real estate requirements. 
+                        <br><br>
+                        People everywhere are searching for a home to call their own. We want to make this search as joyful as finally finding the perfect home because we understand that finding a home is much more than an online search. Shree SS is your one stop solution for all your property requirement, be it residential or commercial.
+                </p>
+                <button class="visit"><a href="https://www.shreessproperties.com/" target="_blank"> Visit our Website</a></button>
+            </div>
+        </div>
+
+        <div class="about2">
+            <h1 style="font-size: 33px; color: white;" data-aos="slide-down" data-aos-duration="1000" data-aos-easing="ease-out">
+                <b> Who We Are?</b>
+            </h1>
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                <p class="text" data-aos="flip-down" offset="350">
+                    Shree SS Properties is an accomplished Real Estate firm, dealing across Delhi/NCR and is working progressively to expand its branches across India. We deal in residential and commercial properties for lease, rent and sell. Drawing from our years of experience since 1995, Shree SS Properties has built a reputation for providing a seamless experience to their customers to secure them their dream home. We bring a strategic yet personal approach to buying, selling and renting process. 
+                    <br><br>
+                    Through constant innovation, utmost integrity and team work SS Properties a socially responsible and comprehensive real estate service provider exceeds customer expectations in quality delivery and cost. We aim at building an ever-lasting relationship with our customers by providing them the best of our services and a solution to all their real estate requirements. 
+                    <br><br>
+                    People everywhere are searching for a home to call their own. We want to make this search as joyful as finally finding the perfect home because we understand that finding a home is much more than an online search. Shree SS is your one stop solution for all your property requirement, be it residential or commercial.
+            </p>
+                <button class="visit"><a href="https://www.shreessproperties.com/" target="_blank"> Visit our Website</a></button>
+            </div>
+        </div>
+
+    </div>
+
+      <!-- **********************************FOOTER***************************************** -->
+<div class="pg-footer" style="margin-top: 7rem;">
+    <footer class="footer">
+      <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
+      <path class="footer-wave-path" d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"></path>
+    </svg>
+    
+    <div class="footer-content" style="padding: 2rem;">
+      <div class="container footer_top">
+        <div class="footer-logo" style="margin-bottom: 2rem;">
+          <a class="navbar-brand" style="display: flex; justify-content: center; align-items: center; width: 9.5rem;" target="_blank" href="https://www.shreessproperties.com/"><img src="ss_logo.png"></a>
+        </div>
+        <!-- SOCIAL MEDIA -->
+        <!-- <div class="social_media_links"> -->
+          <div class="de-flex-col" style="background-size: cover;">
+                                      <div class="social-icons" style="background-size: cover;">
+                                        <a href="https://www.instagram.com/shreessproperties/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                                          <a href="https://www.facebook.com/shreessproperties22" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                                          <a href="https://www.youtube.com/channel/UCEloxLzpmKwSH8v14mUmzSQ" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                          <!-- <a href="#"><i class="fa-brands fa-linkedin"></i></a> -->
+                                          <!-- <a href="#"><i class="fa-brands fa-twitter"></i></a> -->
+                                      </div>
+                                  </div>
+        </div>
+      <!-- </div> -->
+  
+      <div class="container" style="background-size: cover;">
+        <div class="row" style="background-size: cover;">
+          <div class="col-md-3 col-sm-6 col-xs-1" style="background-size: cover;">
+            <div class="widget" style="background-size: cover;">
+              <ul>
+                <li><a style="color: white;" href="https://www.google.com/maps/place/631-632,+Niti+Khand+2,+Indirapuram,+Ghaziabad,+Uttar+Pradesh+201014/@28.6416432,77.3677131,17z/data=!3m1!4b1!4m6!3m5!1s0x390cfaac4cdd0d69:0x948187ee3f232b66!8m2!3d28.6416385!4d77.3699018!16s%2Fg%2F11cp8k4w9t" target="_blank"><i class="fas fa-map-marker-alt"></i> &nbsp;631-632, Niti Khand 2, Indirapuram, Ghaziabad Opp. Presidium School 201014</a></li>
+                <li style="color: white;" href="#"><i class="fas fa-phone-square"></i> Contact Us: &nbsp;<a href="tel:7042850399">7042850399</a></li>
+                <li style="color: white;" href="#"><i class="fas fa-envelope"></i> Email: &nbsp;<a href="mailto:contact@shreessproperties.com" target="_blank">contact@shreessproperties.com</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-1" style="background-size: cover;">
+            <div class="widget" style="background-size: cover;">
+              <h5>ABOUT</h5>
+              <ul>
+                <li><a style="color: white;" target="_blank" href="https://www.shreessproperties.com/about-us">About Us</a></li>
+                <li><a style="color: white;" target="_blank" href="https://www.shreessproperties.com/contact">Contact Us</a></li>
+                <li><a style="color: white;" target="_blank" href="https://www.shreessproperties.com/careers">Careers</a></li>
+                <li><a style="color: white;" target="_blank" href="https://www.shreessproperties.com/terms-conditions">Terms & Conditions</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-1" style="background-size: cover;">
+            <div class="widget" style="background-size: cover;">
+              <h5>MORE</h5>
+              <ul>
+                <li><a style="color: white;" target="_blank" href="https://www.shreessproperties.com/projects">All Projects</a></li>
+                <li><a style="color: white;" target="_blank" href="https://www.shreessproperties.com/properties">All Properties</a></li>
+                <li><a style="color: white;" target="_blank" href="https://www.shreessproperties.com/properties?type=sale">Houses for sale</a></li>
+                <li><a style="color: white;" target="_blank"href="https://www.shreessproperties.com/properties?type=rent">Houses for rent</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-1" style="background-size: cover;">
+            <div class="widget" style="background-size: cover;">
+                <h5>BLOGS</h5>
+                <ul>
+                    <li style="list-style: none;"><a style="color: white;" target="_blank" href="https://www.shreessproperties.com/blogs">Blogs</a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+         </footer>
+  </div>
+  <!-- copy right -->
+      <div class="footer-copyright container-fluid">
+          <div class="footer-copyright-wrapper">
+            <p class="footer-copyright-text">
+              <p class="footer-copyright-link"  style="color: white; text-decoration: none; font-size: 13px;">© Copyright 2022 - Officedekh by Shree SS Properties</p>
+            </p>
+          </div>
+        </div>
+      <!-- **********************************FOOTER ENDS HERE***************************** -->
+  
+
+
+    <script>
+
+        function agree() {
+            if(document.getElementById('check').checked)    
+                document.getElementById('posting').removeAttribute("disabled");
+            else
+                document.getElementById('posting').setAttribute("disabled", "");
+        }
+
+        function post() {
+                document.getElementById("tooltipp").style.display="block";
+
+            setInterval(() => {
+            document.getElementById("tooltipp").style.display="none";
+            }, 1000);
+        }
+
+        </script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+        AOS.init({
+        offset: 300,
+
+        });
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
